@@ -1,0 +1,15 @@
+main{
+    width: 50%;
+    height: 100vh;
+    justify-self: center;
+    align-content: center;
+}
+
+form{
+    background-color: antiquewhite;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
