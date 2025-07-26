@@ -1,15 +1,114 @@
-main{
-    width: 50%;
-    height: 100vh;
-    justify-self: center;
-    align-content: center;
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-form{
-    background-color: antiquewhite;
-    padding: 30px;
-    border-radius: 10px;
+body {
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.todo-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    color: #9d0202;;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9d0202;
+    color: #fff;
+}
+
+input[type="text"]::placeholder, input[type="date"]::placeholder {
+    color: #ffffff; /* Warna placeholder, ubah sesuai keinginan */
+    opacity: 1; /* Memastikan placeholder terlihat jelas */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9d0202;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7e3719;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9d0202;
+    color: #fff;
+    cursor: pointer;
+    appearance: none; /* Menghapus default styling dropdown */
+}
+
+select:hover {
+    background-color: #7e3719;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #7e3719;
+}
+
+th {
+    background-color: #bcbcbc;
+}
+
+td input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+td button {
+    background-color: #9d0202;
+    padding: 5px 10px;
+}
+
+td button:hover {
+    background-color: #9d0202;
 }

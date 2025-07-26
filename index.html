@@ -4,47 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do List</title>
-    
-    <!-- CSS Eksternal Link -->
-    <link rel="stylesheet" href="css\style.css">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <main>
-        <!--Title-->
-        <header>
-            <h1 class ="text-3xl font-bold">To-Do List</h1>
-        </header>
-
-        <!--Form-->
-        <form>
-            <div>
-                <label for="todo-input" class="text-l">Add a new task:</label>
-                <input type="text" id="todo-input" class="border rounded" placeholder="Enter your task here...">
-            </div>
-            <div>
-                <label for="todo-input" class="text-l">Date:</label>
-                <input type="date" id="todo-input" class="border rounded">
-            </div> 
-            <div>
-                <button type="submit" class="bg-red-900 text-white px-3 py-1 rounded">+</button>
-            </div>
-        </form>
-        <!--List to-do-->
-        <section>
-            <div>
-                <button type="submit" class="bg-red-900 text-white px-3 py-1 rounded">Filter</button>
-                <button type="submit" class="bg-red-900 text-white px-3 py-1 rounded">Delete all</button>
-            </div>
-        </section>
-        
-           
-    
-    </main>
-    <!-- JavaScript Eksternal Link -->
-    <script src="js\script.js" defer></script>
+    <img src="img/background.jpg" class="background-image">
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <div class="input-section">
+            <input type="text" id="todoInput" placeholder="Add task...">
+            <input type="date" id="dueDate">
+            <button onclick="addTodo()">+</button>
+        </div>
+        <div class="filter-section">
+            <select id="filterSelect" onchange="filterTodos()">
+                <option value="all">All</option>
+                <option value="done">Done</option>
+                <option value="havent">Not Done</option>
+            </select>
+            <button onclick="deleteAll()">Delete All</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>TASK</th>
+                    <th>DUE DATE</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody id="todoList">
+                <tr>
+                    <td colspan="4">No task found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
